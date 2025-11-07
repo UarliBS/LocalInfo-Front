@@ -1,0 +1,78 @@
+.main-carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin: 60px 0px 60px 0px;
+    white-space: nowrap;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.carousel {
+    padding: 0px 0px 0px 35px;
+    gap: 35px;
+    display: flex;
+}
+
+.carousel-card {
+    display: flex;
+    width: 275px;
+    height: 350px;
+    overflow: hidden;
+    padding: 18px 19px;
+    border-radius: 35px;
+    align-items: flex-end;
+    position: relative;
+    cursor: pointer;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+p.name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff;
+}
+
+.category-likes {
+    display: flex;
+    gap: 10px;
+}
+
+.category,
+.likes {
+    margin: 0;
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.450);
+    gap: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.300);
+}
+
+.main-carousel:hover .carousel {
+    animation-play-state: paused;
+}
+
+.carousel {
+    display: flex;
+    animation: 150s slide infinite linear;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-card {
+      width: 100%;
+      height: 300px; /* Adjust the width for smaller screens */
+    }
+  }

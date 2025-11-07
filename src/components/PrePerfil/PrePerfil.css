@@ -1,0 +1,315 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 1001;
+    width: 850px;
+    max-width: 90%;
+    height: 97vh;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 30px;
+    text-align: center;
+    background: var(--Branco, #FFF);
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.preperfil-title {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+.preperfil-nav {
+    display: flex;
+    padding: 5px 40px;
+    background: var(--Branco, #FFF);
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.preperfil-nav-perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.preperfil-nav-icon i{
+    font-size: 60px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.preperfil-info {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.preperfil-info h1 {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.preperfil-info ul {
+    display: flex;
+    padding: 0px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.preperfil-info li {
+    color: var(--Preto, #000);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 270px;
+    align-items: center;
+    gap: 15px;
+}
+
+.preperfil-grid1 {
+    display: flex;
+    width: 105vh;
+    gap: 85px;
+    height: 310px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.preperfil-grid1-img {
+    width: 275px;
+    height: 100%;
+    display: flex;
+    /* padding: 15px; */
+    border-radius: 40px;
+    background: var(--Plano-de-Fundo, #ECECEC);
+    /* align-items: flex-end; */
+    /* gap: 10px; */
+    /* flex: 1 0 0;*/
+}
+
+.preperfil-grid1-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.preperfil-grid1-info-endereco {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    align-self: stretch;
+}
+
+.preperfil-grid1-info-cronograma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 21px;
+    align-self: stretch;
+}
+
+.preperfil-grid2 {
+    display: flex;
+    padding: 0px 40px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.preperfil-grid2-info-contatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 27px;
+    flex: 1 0 0;
+}
+
+.preperfil-grid2-info-redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 21px;
+    flex: 1 0 0;
+}
+
+.preperfil-btn {
+    display: flex;
+    padding: 20px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.preperfil-btn button {
+    display: flex;
+    width: 230px;
+    height: 60px;
+    overflow: hidden;
+    padding: 26px 36px;
+    border-radius: 44px;
+    box-shadow: 4px 6px 5px 2px rgba(0, 0, 0, 0.25);
+    background: var(--Laranja, #ff8630);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+}
+
+.preperfil-btn button:hover {
+    background-color: #ff974f;
+    transition: 0.5s;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 376px) {
+    .modal-overlay{
+        width: 320px;
+        height: 100%;
+    }
+
+    .modal{
+        width: 300px;
+        position: fixed;
+        align-items: start;
+        top: 25%;
+        left: 12.5%;
+        height: 600px;
+    }
+
+    .preperfil-btn button{
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .preperfil-nav-perfil div {
+        display: none;
+    }
+
+    .preperfil-nav-perfil p {
+        font-size: 17px;
+    }
+
+    .preperfil-info h1 {
+        font-size: 15px;
+        padding: 0;
+        width: 120px;
+    }
+
+    .preperfil-info  {
+        width: 250px;
+    }
+    
+    .preperfil-nav {
+        display: flex;
+        padding: 15px;
+        background: var(--Branco, #FFF);
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .preperfil-nav-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .preperfil-info li {
+        font-size: 12px;
+        width: 120px;
+        gap: 5px;   
+    }
+
+    .preperfil-grid1 {
+        display: flex; 
+        padding: 0;
+        height: 250px; 
+        align-items: center;
+        align-self: stretch;
+    }
+
+    .preperfil-grid1-info {
+        width: 100px;
+    }
+    
+    .preperfil-grid1-img{
+        height: 250px;
+        width: 100px;
+        padding: 0;
+        align-self: start;
+    }
+
+    .preperfil-grid2 {
+        padding: 0;
+        width: 250px;
+    }
+
+    .preperfil-grid1-info-cronograma {
+        width: 130px;
+    }
+
+}

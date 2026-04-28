@@ -1,10 +1,37 @@
-# lcoalinfo-front
+# LocalInfo‑Front
 
-# React + Vite
+## Visão Geral  
+**LocalInfo‑Front** é a interface web do sistema LocalInfo, desenvolvida em **React** para permitir que usuários explorem e interajam com informações locais de forma simples, responsiva e intuitiva. O projeto consome a API do **LocalInfo‑Back**, exibindo dados sobre locais, categorias e detalhes geográficos em tempo real.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Funcionalidades principais  
+- Interface moderna e responsiva com React  
+- Integração direta com a API LocalInfo‑Back  
+- Exibição e busca de informações locais  
+- Navegação fluida e componentes reutilizáveis  
+- Suporte a autenticação e gerenciamento de usuários  
+- Suporte a filtros e listagens dinâmicas  
 
-Currently, two official plugins are available:
+## Tecnologias utilizadas  
+- React (JavaScript ou TypeScript)  
+- Vite ou Create React App (dependendo da versão usada)  
+- Axios para consumo da API  
+- React Router para navegação  
+- TailwindCSS (ou outro framework CSS, se aplicável)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Estrutura do repositório  
+```text
+.
+├── src/                # Código‑fonte principal
+│   ├── components/     # Componentes reutilizáveis
+│   ├── pages/          # Páginas da aplicação
+│   ├── services/       # Integração com a API
+│   ├── assets/         # Imagens, ícones e estilos
+│   └── App.jsx/tsx     # Componente raiz
+├── public/             # Arquivos estáticos
+├── package.json        # Dependências e scripts
+└── README.md           # Esta documentação
+```
+
+## Contato  
+Desenvolvido por **Warllen Barreiros** ([@UarliBS](https://github.com/UarliBS)) e **Gabriel Gomes** ([@gomess99](https://github.com/gomess99)).  
+Para dúvidas ou sugestões, abra uma issue ou envie mensagem via GitHub.

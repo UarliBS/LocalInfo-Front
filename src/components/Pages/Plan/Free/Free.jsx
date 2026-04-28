@@ -9,6 +9,8 @@ import imgLike from "../../../../img/icons/favorite.png";
 import { findPlanoFreeById } from "../../../../services/planofreeServices";
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
+const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+
 function Free() {
   const { id } = useParams();
   const [planofreeById, setPlanoFree] = useState({});
@@ -38,6 +40,7 @@ function Free() {
     email,
     avatar
   } = planofreeById;
+  const likesCount = Array.isArray(likes) ? likes.length : likes || 0;
 
   const img1 = galeria ? galeria.img1 : null;
   const img2 = galeria ? galeria.img2 : null;
@@ -70,7 +73,7 @@ function Free() {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyClYvOFH5TS3gEJbu_-VH8ydwLcOivnnms',
+    googleMapsApiKey,
   });
 
   const [map, setMap] = React.useState(null);
@@ -102,7 +105,7 @@ function Free() {
               </div>
               <i>
                 <img src={imgLike} alt="Icone like" />
-                {likes}
+                {likesCount}
               </i>
             </div>
           </div>
@@ -278,7 +281,11 @@ function Free() {
                 )}
               </GoogleMap>
             ) : (
-              <div>Loading...</div>
+              <div>
+                {googleMapsApiKey
+                  ? "Carregando mapa..."
+                  : "Configure VITE_GOOGLE_MAPS_API_KEY para exibir o mapa."}
+              </div>
             )}
           </div>
           <div className="free-local-funcionamento">

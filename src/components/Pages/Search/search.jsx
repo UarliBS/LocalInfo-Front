@@ -44,6 +44,7 @@ export function Search() {
             {planofree.map((item) => (
               <BusquePjCard
                 key={item.id}
+                id={item.id}
                 categoria={item.categoria}
                 likes={item.likes.length}
                 funcionamento={item.funcionamento}

@@ -1,7 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-
-const baseURL = "http://localhost:3010";
+import API_URL from "./api";
 
 export function singup(data) {
   delete data.confirmPassword;
@@ -11,7 +10,7 @@ export function singup(data) {
     avatar:
       "https://uploaddeimagens.com.br/images/004/692/619/original/icon.png?1702777124",
   };
-  const response = axios.post(`${baseURL}/pessoajuridica/create`, body);
+  const response = axios.post(`${API_URL}/pessoajuridica/create`, body);
   return response;
 }
 
@@ -22,12 +21,12 @@ function generateUserName(name) {
 }
 
 export function signin(data) {
-  const response = axios.post(`${baseURL}/auth/authpj`, data);
+  const response = axios.post(`${API_URL}/auth/authpj`, data);
   return response;
 }
 
 export function userLogged() {
-  const response = axios.get(`${baseURL}/pessoajuridica/findById`, {
+  const response = axios.get(`${API_URL}/pessoajuridica/findById`, {
     headers: {
       Authorization: `Bearer ${Cookies.get("token")}`,
     },
@@ -37,7 +36,7 @@ export function userLogged() {
 
 export async function userFindById() {
   try {
-    const response = await axios.get(`${baseURL}/pessoajuridica/findById`, {
+    const response = await axios.get(`${API_URL}/pessoajuridica/findById`, {
       headers: {
         Authorization: `Bearer ${Cookies.get("token")}`,
       },
@@ -52,7 +51,7 @@ export async function userFindById() {
 export async function userUpdate(id, userData) {
   try {
     const response = await axios.patch(
-      `${baseURL}/pessoajuridica/update/${id}`,
+      `${API_URL}/pessoajuridica/update/${id}`,
       userData, // Corpo da requisição
       {
         headers: {

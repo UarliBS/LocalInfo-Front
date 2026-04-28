@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Pages/Home/Home";
-import AboutUs from "./components/Pages/AboutUs/AboutUs";
+import AboutUs from "./components/Pages/AboutUS/AboutUS";
 import FindBusiness from "./components/Pages/FindBusiness/FindBusiness";
 import Plan from "./components/Pages/Plan/Plan";
 import Register from "./components/Pages/UserRegister/Register/Register";
@@ -30,8 +30,8 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/newpassword" element={<NewPassword />} />
           <Route path="/premium" element={<Premium />} />
-          <Route path="/search/:categoria" element={<Search/>} />
-          <Route path="/editarperfil" element={<EditarPerfil/>} />
+          <Route path="/search/:categoria" element={<Search />} />
+          <Route path="/editarperfil" element={<EditarPerfil />} />
         </Routes>
       </Router>
     </div>

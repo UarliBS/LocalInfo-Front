@@ -1,8 +1,9 @@
-import axios from "axios"
+import axios from "axios";
+import API_URL from "./api";
 
-const baseURL = "http://localhost:3010";
-
-export function searchLocals(categoria){
-    const response = axios.get(`${baseURL}/planofree/search?categoria=${categoria}`);
-    return response;
+export function searchLocals(categoria) {
+  const response = axios.get(`${API_URL}/planofree/search`, {
+    params: { categoria },
+  });
+  return response;
 }

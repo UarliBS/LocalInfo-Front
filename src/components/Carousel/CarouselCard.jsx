@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function CarouselCard({ avatar, name, categoria, likes }) {
   const [liked, setLiked] = useState(false);
+  const likesCount = Array.isArray(likes) ? likes.length : likes || 0;
 
   const handleClick = (event) => {
     event.stopPropagation();
@@ -33,7 +34,7 @@ function CarouselCard({ avatar, name, categoria, likes }) {
                 handleClick(event);
               }}
             ></i>
-            {likes}
+            {likesCount}
           </p>
         </div>
       </div>

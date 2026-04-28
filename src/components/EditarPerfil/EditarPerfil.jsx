@@ -54,7 +54,7 @@ function EditarPerfil() {
             id={item.id}
             categoria={item.categoria}
             descricao={item.descricao}
-            likes={item.likes}
+            likes={item.likes.length}
             img1={item.galeria.img1}
             img2={item.galeria.img2}
             img3={item.galeria.img3}

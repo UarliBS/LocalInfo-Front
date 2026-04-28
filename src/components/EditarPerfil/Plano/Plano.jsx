@@ -34,6 +34,7 @@ function Plano(props) {
     img13,
     img14,
   } = props;
+  const likesCount = Array.isArray(likes) ? likes.length : likes || 0;
 
   return (
     <div className="plano-container">
@@ -52,7 +53,7 @@ function Plano(props) {
                 </div>
                 <i>
                   <img src={imgLike} alt="Icone like" />
-                  {likes}
+                  {likesCount}
                 </i>
               </div>
             </div>

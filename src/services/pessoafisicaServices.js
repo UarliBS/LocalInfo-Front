@@ -1,10 +1,9 @@
-import axios from "axios"
+import axios from "axios";
 import Cookies from "js-cookie";
-
-const baseURL = "http://localhost:3010";
+import API_URL from "./api";
 
 export function getAllPessoaFisica(){
-    const response = axios.get(`${baseURL}/pessoafisica`);
+    const response = axios.get(`${API_URL}/pessoafisica`);
     return response;
 }
 
@@ -15,7 +14,7 @@ export function singupPf(data) {
       username: generateUserNamePf(data.name),
       avatar: "https://cdn-icons-png.flaticon.com/512/5987/5987462.png",
     };
-    const response = axios.post(`${baseURL}/pessoafisica/create`, body);
+    const response = axios.post(`${API_URL}/pessoafisica/create`, body);
     return response;
   }
 
@@ -26,7 +25,7 @@ export function singupPf(data) {
   }
 
   export function userLoggedPf() {
-    const response = axios.get(`${baseURL}/pessoafisica/findById`, {
+    const response = axios.get(`${API_URL}/pessoafisica/findById`, {
       headers: {
         Authorization: `Bearer ${Cookies.get("token")}`,
       },
@@ -35,6 +34,6 @@ export function singupPf(data) {
   }
 
   export function signinPf(data) {
-    const response = axios.post(`${baseURL}/auth/authpf`, data);
+    const response = axios.post(`${API_URL}/auth/authpf`, data);
     return response;
   }

@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../components/Pages/Home/Home";
-import AboutUs from "../components/Pages/AboutUs/AboutUs";
-import FindBusiness from "./components/Pages/FindBusiness/FindBusiness";
-import Plan from "./components/Pages/Plan/Plan";
-import Register from "./components/Pages/UserRegister/RegisterPf_Pj/RegisterPj";
-import SucessRegister from "./components/Pages/UserRegister/SucessRegister/SucessRegister";
+import AboutUs from "../components/Pages/AboutUS/AboutUS";
+import FindBusiness from "../components/Pages/FindBusiness/FindBusiness";
+import Plan from "../components/Pages/Plan/Plan";
+import Register from "../components/Pages/UserRegister/Register/Register";
+import SucessRegister from "../components/Pages/UserRegister/SucessRegister/SucessRegister";
 import Free from "../components/Pages/Plan/Free/Free";
 import Premium from "../components/Pages/Plan/Premium/Premium";
 import Categories from "../components/Pages/Categories/Categories";
 import Login from "../components/Pages/Login/Login";
 import NewPassword from "../components/Pages/Login/NewPassword";
-import Search from "./components/Pages/Search/search";
+import Search from "../components/Pages/Search/search";
 import EditarPerfil from "../components/EditarPerfil/EditarPerfil";
 
 const Rotas = () => {

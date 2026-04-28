@@ -1,15 +1,14 @@
-import axios from "axios"
+import axios from "axios";
 import Cookies from "js-cookie";
-
-const baseURL = "http://localhost:3010";
+import API_URL from "./api";
 
 export function getAllPlanoFree() {
-    const response = axios.get(`${baseURL}/planofree`);
+    const response = axios.get(`${API_URL}/planofree`);
     return response;
 }
 
 export function findPlanoFreeById(id) {
-  const response = axios.get(`${baseURL}/planofree/${id}`);
+  const response = axios.get(`${API_URL}/planofree/${id}`);
   return response;
 }
 
@@ -65,12 +64,12 @@ export function createPlanoFree() {
             endereco2: "seu_endereco1"
         },
     };
-    const response = axios.post(`${baseURL}/planofree/create`, body, config);
+    const response = axios.post(`${API_URL}/planofree/create`, body, config);
     return response;
 }
 
 export function findPlanoFreeByUserId() {
-    const response = axios.get(`${baseURL}/planofree/byPessoaJuridica`, {
+    const response = axios.get(`${API_URL}/planofree/byPessoaJuridica`, {
         headers: {
             Authorization: `Bearer ${Cookies.get("token")}`,
         },
@@ -81,7 +80,7 @@ export function findPlanoFreeByUserId() {
 
 export async function deletePlanoFreeById(id) {
     try {
-      const response = await axios.delete(`${baseURL}/planofree/delete/${id}`, {
+      const response = await axios.delete(`${API_URL}/planofree/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${Cookies.get("token")}`,
         },
@@ -95,11 +94,15 @@ export async function deletePlanoFreeById(id) {
 
   export async function likesPlanoFreeById(id) {
     try {
-        const response = await axios.patch(`${baseURL}/planofree/${id}/likes`, {
-          headers: {
-            Authorization: `Bearer ${Cookies.get("token")}`,
-          },
-        });
+        const response = await axios.patch(
+          `${API_URL}/planofree/likes/${id}`,
+          {},
+          {
+            headers: {
+              Authorization: `Bearer ${Cookies.get("token")}`,
+            },
+          }
+        );
         return response.data;
       } catch (error) {
         console.error("Erro em likePlanoFreeById:", error);
